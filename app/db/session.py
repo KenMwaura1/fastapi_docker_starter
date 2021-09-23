@@ -5,7 +5,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 
 load_dotenv()
+# Looks for postgres db in the environment varibles
 SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
+
+# SQLALCHEMY_DATABASE_URI = "sqlite:///example.db"  # uncomment to use sqlite
 
 engine = create_engine(SQLALCHEMY_DATABASE_URI)
 
