@@ -2,7 +2,7 @@ name: Docker Compose Actions Workflow
 on: push
 concurrency: "4"
 jobs:
-  test:
+  docker-compose:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.4.0
@@ -15,5 +15,7 @@ jobs:
         # run: docker-compose up -d --build
       - name: Stop containers
         if: always()
-        run: docker-compose -f "docker-compose.yaml" down
+        run: | 
+        ./stop.sh
+        docker-compose -f "docker-compose.yaml" down
 
