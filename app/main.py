@@ -6,6 +6,7 @@ from fastapi.templating import Jinja2Templates
 from pathlib import Path
 
 from sqlalchemy.orm import Session
+from starlette.templating import _TemplateResponse
 
 from app import crud, deps
 from app.schema import Anime
@@ -29,7 +30,7 @@ def root() -> dict:
 
 
 @api_router.get('/home', status_code=200, response_model=List[Anime])
-def home(request: Request, db: Session = Depends(deps.get_db)) -> dict:
+def home(request: Request, db: Session = Depends(deps.get_db)) -> _TemplateResponse:
     """
     home page get
     :param db:
