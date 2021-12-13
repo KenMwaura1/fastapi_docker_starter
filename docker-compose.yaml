@@ -6,8 +6,6 @@ services:
     command: ./run.sh
     volumes:
       - ./app/:/usr/src/app/
-    env_file:
-      - .env
     ports:
       - "8001:8001"
     depends_on:
@@ -18,8 +16,10 @@ services:
     image: postgres:13.0-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    env_file:
-      - .env
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
     ports:
       - "5433:5432"
 
