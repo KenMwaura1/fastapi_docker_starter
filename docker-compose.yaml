@@ -1,17 +1,6 @@
 version: "3.8"
 
 services:
-  app:
-    build: .
-    command: ./run.sh
-    volumes:
-      - ./app/:/usr/src/app/
-    ports:
-      - "8001:8001"
-    depends_on:
-      - database
-
-
   database:
     image: postgres:13.0-alpine
     volumes:
@@ -22,6 +11,17 @@ services:
       - POSTGRES_DB=postgres
     ports:
       - "5432:5432"
+  app:
+    build: .
+    volumes:
+      - ./app/:/usr/src/app/
+    ports:
+      - "8001:8001"
+    depends_on:
+      - database
+
+
+
 
 volumes:
   postgres_data:
