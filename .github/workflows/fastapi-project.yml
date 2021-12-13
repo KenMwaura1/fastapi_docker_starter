@@ -12,7 +12,7 @@ jobs:
       matrix:
         python-version: [ 3.6, 3.7, 3.8, 3.9]
         database-name:
-          - online-store-test
+          - postgres
         database-password:
           - postgres
         database-user:
@@ -71,7 +71,6 @@ jobs:
         POSTGRES_DB: ${{ matrix.database-name }}
       run: |
         export SQLALCHEMY_DATABASE_URL=postgres://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
-        ./run.sh
     - name: Run Api
       run: |
         export SQLALCHEMY_DATABASE_URL=postgres://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
