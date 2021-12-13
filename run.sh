@@ -7,4 +7,6 @@ export PORT=${PORT:-8001}
 # Create initial data in DB
 python ./initial_data.py
 
-exec uvicorn --reload --host "$HOST" --port "$PORT" "$APP_MODULE"
+
+# Run server
+exec uvicorn --reload --host "$HOST" --port "$PORT" "$APP_MODULE" &
