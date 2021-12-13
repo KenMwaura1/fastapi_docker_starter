@@ -17,6 +17,8 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
+RUN cp .env.example .env
+
 RUN chmod a+x ./run.sh
 
 RUN ./run.sh
