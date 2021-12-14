@@ -16,7 +16,6 @@ jobs:
       - name: Stop containers
         if: always()
         run: | 
-          ./stop.sh
           docker-compose -f "docker-compose.yaml" down
           
 
