@@ -71,14 +71,11 @@ jobs:
         POSTGRES_DB: ${{ matrix.database-name }}
       run: |
         export SQLALCHEMY_DATABASE_URL=postgres://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
-    - name: Run Api
+    - name: Run & Stop The Api
       run: |
         export SQLALCHEMY_DATABASE_URL=postgres://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
-        ./run.sh
-    - name: Stop Api
-      run: |
-        `pkill -f run.sh`
-        ./stop.sh 
+        ./stop.sh
+    
         
 
 
