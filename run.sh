@@ -9,4 +9,4 @@ python ./initial_data.py
 
 
 # Run server
-exec uvicorn --reload --host "$HOST" --port "$PORT" "$APP_MODULE" &
+exec uvicorn --reload --host "$HOST" --port "$PORT" "$APP_MODULE"

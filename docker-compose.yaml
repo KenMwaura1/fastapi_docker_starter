@@ -14,14 +14,16 @@ services:
   app:
     build: .
     volumes:
-      - ./app/:/usr/src/app/
+      - .:/usr/src/app/
     ports:
       - "8001:8001"
     depends_on:
       - database
 
-
-
-
 volumes:
   postgres_data:
+
+networks:
+  default:
+    external:
+      name: fastapi
