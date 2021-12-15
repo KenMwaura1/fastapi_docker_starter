@@ -22,8 +22,3 @@ services:
 
 volumes:
   postgres_data:
-
-networks:
-  default:
-    external:
-      name: fastapi
