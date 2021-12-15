@@ -21,7 +21,9 @@ RUN cp .env.example .env
 
 RUN chmod a+x ./run.sh
 
-RUN ./run.sh
+EXPOSE 8001:8001
+
+CMD ["./run.sh"]
 
 
 
