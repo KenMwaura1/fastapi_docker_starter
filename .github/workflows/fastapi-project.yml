@@ -75,10 +75,10 @@ jobs:
       run: |
         export SQLALCHEMY_DATABASE_URL=postgres://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
         ./run.sh
-    - name: Run tests
+    - name: Stop Api
       run: |
-        export SQLALCHEMY_DATABASE_URL=postgres://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
-        ./run.sh
-  
+        `pkill -f run.sh`
+        ./stop.sh 
+        
 
 

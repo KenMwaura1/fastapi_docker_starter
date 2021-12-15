@@ -8,8 +8,8 @@ export PORT=${PORT:-8001}
 
 sleep 10
 
-LASTPID=$!
+# LASTPID=$!
 
-kill -9 $LASTPID
+# kill -9 $LASTPID
 
 kill -9 $(lsof -t -i tcp:$PORT)
