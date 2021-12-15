@@ -60,9 +60,105 @@ You the following prerequisites to get started with this project.
 
 ### Installation
 
-To get started clone this repository and run the following command.
 
+1. Clone GitHub repository
 
+    ```shell
+    git clone https://github.com/KenMwaura1/fastapi_docker_starter
+    ```
+
+2. Change into the folder
+
+    ```shell
+   cd fastapi_docker_starter
+    ```
+
+3. Create a virtual environment
+
+   ```shell
+      python3 -m venv venv 
+   ```
+
+    * Activate the virtual environment
+
+   ```shell
+   source ./bin/activate
+   ```
+   * For Fish shell
+   ```shell 
+   . venv/bin/activate.fish
+   ```
+
+* If you are using [pyenv](https://github.com/pyenv/pyenv):
+
+  3a. Create a virtualenv
+
+   ```
+       pyenv virtualenv fastapi
+   ```
+
+  3b. Activate the virtualenv
+
+   ```
+   pyenv activate fastapi
+   ```
+
+4. Create a `.env` file and add your credentials
+
+   ```
+   touch .env 
+   ```
+
+   OR Copy the included example
+
+    ```
+    cp .env-example .env 
+    ```
+
+5. Add your credentials to the `.env` file
+
+   OR
+   ```
+   export DATABASE_URL=postgres://username:password@localhost:5432/database_name
+   ```
+
+6. Install the required dependencies
+
+   ```shell
+   pip install -r requirements.txt
+   ```
+
+7. Make the shell script executable
+
+    ```shell
+   chmod a+x ./run.sh
+    ```
+
+8. Run the app
+
+    ```shell
+   ./run.sh
+    ```
+
+   OR
+   run with [uvicorn](https://uvicorn.org/):
+
+    ```shell
+   uvicorn app.main:app --reload
+    ```
+
+## Docker Compose
+To run the app and the database in a Docker Compose file follow these steps.
+
+Open a terminal and run the following commands.
+```shell
+docker-compose up
+```
+
+To stop the app and the database run the following commands.
+```shell
+docker-compose down
+```
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -72,13 +168,7 @@ To get started clone this repository and run the following command.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+-- TODO: Add usage examples
 
 
 <!-- CONTRIBUTING -->
@@ -111,9 +201,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@Ken_Mwaura1
-](https://twitter.com/Ken_Mwaura1
-) - kemwaura@gmail.com@kemwaura@gmail.com_client.com
+[@Ken_Mwaura1](https://twitter.com/Ken_Mwaura1
+) - kemwaura@gmail.com
 
 Project Link: [https://github.com/KenMwaura1/fastapi_docker_starter](https://github.com/KenMwaura1/fastapi_docker_starter
 )
@@ -140,9 +229,6 @@ Project Link: [https://github.com/KenMwaura1/fastapi_docker_starter](https://git
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/kennedy-mwaura
 [product-screenshot]: app/static/images/Screenshot_Zoo%20Anime%20—%20Mozilla%20Firefox_1.png
-
-
-## Brief Description
 
 
 ## Author 
