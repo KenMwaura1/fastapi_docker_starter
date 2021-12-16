@@ -70,10 +70,10 @@ jobs:
         POSTGRES_DB_PORT: ${{ matrix.database-port }}
         POSTGRES_DB: ${{ matrix.database-name }}
       run: |
-        export SQLALCHEMY_DATABASE_URI=postgres://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
+        export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
     - name: Run & Stop The Api
       run: |
-        export SQLALCHEMY_DATABASE_URI=postgres://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
+        export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
         ./stop.sh
     
         
