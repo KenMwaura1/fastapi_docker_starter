@@ -73,7 +73,7 @@ You the following prerequisites to get started with this project.
     * Activate the virtual environment
 
    ```shell
-   source ./bin/activate
+   source ./venv/bin/activate
    ```
 
    * For Fish shell
