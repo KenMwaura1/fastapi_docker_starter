@@ -42,7 +42,7 @@ To get a local copy up and running follow these simple example steps.
 
 You the following prerequisites to get started with this project.
 
-1. [Install Python 3.9.7](https://www.python.org/downloads/)
+1. [Install Python 3.9.7 or 3.10](https://www.python.org/downloads/)
 2. [Install Docker](https://docs.docker.com/install/)
 3. [Install Docker Compose](https://docs.docker.com/compose/install/)
 4. [Install PostgreSQL](https://www.postgresql.org/download/)
