@@ -2,15 +2,12 @@
 
 [![Docker Compose Actions Workflow](https://github.com/KenMwaura1/fastapi_docker_starter/actions/workflows/fastapi-starter-docker.yml/badge.svg)](https://github.com/KenMwaura1/fastapi_docker_starter/actions/workflows/fastapi-starter-docker.yml)
 
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -24,8 +21,6 @@
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Built With
 
 * [FastAPI](https://fastapi.tiangolo.com/)
@@ -35,11 +30,7 @@
 * [PostgreSQL](https://www.postgresql.org/)
 * [SQLAlchemy](https://www.sqlalchemy.org/)
 
-
-
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -50,6 +41,7 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 You the following prerequisites to get started with this project.
+
 1. [Install Python 3.9.7](https://www.python.org/downloads/)
 2. [Install Docker](https://docs.docker.com/install/)
 3. [Install Docker Compose](https://docs.docker.com/compose/install/)
@@ -59,7 +51,6 @@ You the following prerequisites to get started with this project.
 7. [Create a GitHub repository](https://help.github.com/en/github/getting-started-with-github/creating-a-repository)
 
 ### Installation
-
 
 1. Clone GitHub repository
 
@@ -84,8 +75,10 @@ You the following prerequisites to get started with this project.
    ```shell
    source ./bin/activate
    ```
+
    * For Fish shell
-   ```shell 
+
+   ```shell
    . venv/bin/activate.fish
    ```
 
@@ -118,6 +111,7 @@ You the following prerequisites to get started with this project.
 5. Add your credentials to the `.env` file
 
    OR
+
    ```
    export DATABASE_URL=postgres://username:password@localhost:5432/database_name
    ```
@@ -148,28 +142,27 @@ You the following prerequisites to get started with this project.
     ```
 
 ## Docker Compose
+
 To run the app and the database in a Docker Compose file follow these steps.
 
 Open a terminal and run the following commands.
+
 ```shell
 docker-compose up
 ```
 
 To stop the app and the database run the following commands.
+
 ```shell
 docker-compose down
 ```
 
-
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 -- TODO: Add usage examples
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -187,16 +180,12 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
@@ -208,11 +197,6 @@ Project Link: [https://github.com/KenMwaura1/fastapi_docker_starter](https://git
 )
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -230,6 +214,6 @@ Project Link: [https://github.com/KenMwaura1/fastapi_docker_starter](https://git
 [linkedin-url]: https://linkedin.com/in/kennedy-mwaura
 [product-screenshot]: app/static/images/Screenshot_Zoo%20Anime%20—%20Mozilla%20Firefox_1.png
 
+## Author
 
-## Author 
 [Ken Mwaura](http://github.com/KenMwaura1)
