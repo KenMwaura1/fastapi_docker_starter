@@ -1,6 +1,6 @@
 FROM python:3.9.7
 
-MAINTAINER Ken Mwaura "kemwaura@gmail.com"
+LABEL Ken Mwaura "kemwaura@gmail.com"
 
 ENV PYTHON_PATH /usr/local/python3.9/bin/python3.9
 ENV PORT 8001
