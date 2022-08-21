@@ -105,7 +105,7 @@ You the following prerequisites to get started with this project.
    OR Copy the included example
 
     ```
-    cp .env-example .env 
+    cp .env.example .env 
     ```
 
 5. Add your credentials to the `.env` file
@@ -140,6 +140,10 @@ You the following prerequisites to get started with this project.
     ```shell
    uvicorn app.main:app --reload
     ```
+
+9. Open the browser and go to <http://localhost:8001/home> to view the app running.
+
+10. View the docs at <http://localhost:8001/docs> to view the API docs.
 
 ## Docker Compose
 
