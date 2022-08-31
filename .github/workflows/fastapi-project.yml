@@ -10,7 +10,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [ 3.7, 3.8, 3.9]
+        python-version: [ 3.7, 3.8, 3.9, 3.10]
         database-name:
           - postgres
         database-password:
@@ -71,13 +71,10 @@ jobs:
         POSTGRES_DB: ${{ matrix.database-name }}
       run: |
         export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
-    - name: Run The Api
+    - name: Stop The Api
       run: |
         export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
-        ./run.sh
-    - name: Stop The Api
-      run: | 
-        ./stop.sh 
+        ./stop.sh
     
         
 
