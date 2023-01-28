@@ -6,11 +6,62 @@ jikan = Jikan()
 
 
 def get_anime():
-    sn = jikan.season()
-    data = sn.get('anime')
+    sn = jikan.seasons(extension='now')
+    data = sn.get('data')
     print("Here")
-    # print(data)
+    print(data)
     return data
+
+def get_top_anime():
+    sn = jikan.top(type='anime')
+    data = sn.get('data')
+    print("Here")
+    print(data)
+    return data
+
+def get_anime_by_id(id):
+    sn = jikan.anime(id)
+    data = sn
+    print(data)
+    return data
+
+def get_anime_by_name(name):
+    sn = jikan.search('anime', name)
+    data = sn.get('results')
+    print(data)
+    return data
+
+def get_anime_by_genre(genre):
+    sn = jikan.genre(type='anime', genre_id=genre)
+    data = sn.get('data')
+    print(data)
+    return data
+
+def get_anime_by_season(year, season):
+    sn = jikan.season(year=year, season=season)
+    data = sn.get('data')
+    print(data)
+    return data
+
+def get_anime_by_year(year):
+    sn = jikan.season_archive(year=year)
+    data = sn.get('data')
+    print(data)
+    return data
+
+def get_anime_by_producer(producer):
+    sn = jikan.producer(producer)
+    data = sn.get('data')
+    print(data)
+    return data
+
+def search_anime_by_name(name):
+    sn = jikan.search('anime', name)
+    data = sn.get('data')
+    print(data)
+    return data
+# search_anime_by_name('jojo')
+# print(get_top_anime()[0].get('images').get('webp').get('large_image_url'))
 
 
 """
