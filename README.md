@@ -12,7 +12,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 <!--Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `KenMwaura1`, `fastapi_docker_starter
 `, `Ken_Mwaura1`, `kennedy-mwaura`, `kemwaura@gmail.com`, `kemwaura@gmail.com_client`, `FastApi Docker Quickstart`, `Quick and easy way to dckerize a fastapi app` -->
@@ -34,9 +33,7 @@
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Below are steps to get the project up and running locally.
 
 ### Prerequisites
 
