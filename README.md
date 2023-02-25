@@ -125,17 +125,23 @@ You the following prerequisites to get started with this project.
    chmod a+x ./run.sh
     ```
 
-8. Run the app
+8. Run the api using the shell script
 
     ```shell
    ./run.sh
     ```
 
+    8b. Start the server using the python script
+
+   ```shell
+   python main.py
+   ```
+
    OR
    run with [uvicorn](https://uvicorn.org/):
 
     ```shell
-   uvicorn app.main:app --reload
+        uvicorn main:app --reload --port 8002 --host 0.0.0.0
     ```
 
 9. Open the browser and go to<http://localhost:8001/home> view the app running.
