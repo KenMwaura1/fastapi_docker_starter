@@ -12,7 +12,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
 <!--Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `KenMwaura1`, `fastapi_docker_starter
 `, `Ken_Mwaura1`, `kennedy-mwaura`, `kemwaura@gmail.com`, `kemwaura@gmail.com_client`, `FastApi Docker Quickstart`, `Quick and easy way to dckerize a fastapi app` -->
 
@@ -33,6 +32,7 @@
 
 <!-- GETTING STARTED -->
 ## Getting Started
+
 Below are steps to get the project up and running locally.
 
 ### Prerequisites
