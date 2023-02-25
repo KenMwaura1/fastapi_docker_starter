@@ -32,19 +32,22 @@ def get_anime_by_name(name):
     return data
 
 def get_anime_by_genre(genre):
-    sn = jikan.genre(type='anime', genre_id=genre)
+    sn = jikan.genres(type='anime', filter=genre)
     data = sn.get('data')
     print(data)
     return data
 
 def get_anime_by_season(year, season):
-    sn = jikan.season(year=year, season=season)
+    sn = jikan.seasons(year=year,
+        season='winter',
+        # page=2,
+        parameters={'filter': 'tv'})
     data = sn.get('data')
     print(data)
     return data
 
 def get_anime_by_year(year):
-    sn = jikan.season_archive(year=year)
+    sn = jikan.seasons(year=year)
     data = sn.get('data')
     print(data)
     return data
