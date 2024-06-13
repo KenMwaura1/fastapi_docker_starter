@@ -5,7 +5,7 @@ jobs:
   docker-compose:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.5
+      - uses: actions/checkout@v4.1.7
       - name: Build the images and start the containers
         run: |
           export GITHUB_WORKFLOW=True
