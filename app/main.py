@@ -5,7 +5,7 @@ from fastapi.templating import Jinja2Templates
 
 from pathlib import Path
 
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session 
 from starlette.templating import _TemplateResponse
 
 from app import crud, deps
@@ -44,14 +44,13 @@ def home(request: Request, db: Session = Depends(deps.get_db)) -> _TemplateRespo
         raise HTTPException(status_code=404, detail='Anime not found in db')
 
     # ta = [t for t in get_anime()]
-    return TEMPLATES.TemplateResponse("index.html", {"request": request, "all_anime": all_anime}, )
+    return TEMPLATES.TemplateResponse("index.html", {"request": request, "all_anime": all_anime})
 
 
-@api_router.get("/anime/all", status_code=200, response_model=List[Anime])
-def fetch_anime(*, db: Session = Depends(deps.get_db)) -> Any:
+@api_router.get("/anime/all", status_code=200, response_model=List[Anime]) 
+def fetch_all_anime(*, db: Session = Depends(deps.get_db)) -> Any:
     """
     function to fetch all the anime in batches
-    :param anime_id:
     :param db:
     :return:
     """
@@ -73,7 +72,6 @@ def fetch_anime(*, anime_id: int, db: Session = Depends(deps.get_db)) -> Any:
     :return:
     """
     result = crud.anime.get(db=db, id=anime_id)
-    print(result)
     if not result:
         # the exception is raised, not returned - you will get a validation
         # error otherwise.
