@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-from pprint import pprint
-=======
->>>>>>> 2a967e7b928f6da9141fc7c1dafc7f5b16f6985f
 from sqlalchemy.orm import Session
 
 from app import crud, schema, anime_data
@@ -18,21 +13,6 @@ print(current_year)
 def init_db(db: Session) -> None:
     # Create all the tables
     Base.metadata.create_all(bind=engine)
-<<<<<<< HEAD
-    test_anime = crud.anime.get_multi(SessionLocal())
-
-    # print(test_anime)
-    print('test')
-    #print(anime_data.get_anime())
-    top_anime = anime_data.get_top_anime()
-    all_anime = anime_data.get_anime()
-    search_anime = anime_data.search_anime_by_name('naruto')
-    shounnen_anime = anime_data.get_anime_by_genre('shounen')
-    yearly_anime = anime_data.get_anime_by_season(f"{current_year}",season='winter')
-    for anime in top_anime:
-            if test_anime is not anime.get('mal_id'):
-
-=======
     test_anime = crud.anime.get_multi(db)
     # Add logic to initialize the database with test data if needed
     
@@ -45,7 +25,6 @@ def init_db(db: Session) -> None:
             crud.anime.create(db, obj_in=schema.AnimeCreate(title=anime.get('title')))
             mal_id = anime.get('mal_id')
             if not any(existing.mal_id == mal_id for existing in test_anime):
->>>>>>> 2a967e7b928f6da9141fc7c1dafc7f5b16f6985f
                 new_anime = schema.AnimeCreate(
                     mal_id=mal_id,
                     url=anime.get('url'),

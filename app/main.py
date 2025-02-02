@@ -70,12 +70,7 @@ def fetch_anime(*, anime_id: int, db: Session = Depends(deps.get_db)) -> Any:
     :param db:
     :return:
     """
-<<<<<<< HEAD
-    result = crud.anime.get_by_id(db=db, id=anime_id)
-    print(result)
-=======
     result = crud.anime.get(db=db, id=anime_id)
->>>>>>> 2a967e7b928f6da9141fc7c1dafc7f5b16f6985f
     if not result:
         # the exception is raised, not returned - you will get a validation
         # error otherwise.
