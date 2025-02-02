@@ -1,7 +1,4 @@
 from pydantic import BaseModel, HttpUrl
-from dataclasses import dataclass
-
-
 class AnimeBaseModel(BaseModel):
     mal_id: int
     url: HttpUrl
@@ -17,8 +14,6 @@ class AnimeBaseModel(BaseModel):
 # Properties shared by models stored in DB
 class AnimeInBase(AnimeBaseModel):
     id: int
-    mal_id: int
-
     class Config:
         orm_mode = True
 
@@ -29,14 +24,10 @@ class Anime(AnimeInBase):
 
 
 # Properties to create new anime
-@dataclass
-class AnimeCreate:
-    mal_id: int
-    url: HttpUrl
-    title: str
-    image_url: str
-    synopsis: str
-    type: str
-    airing_start: str
-    episodes: int
-    members: int
+class AnimeCreate(AnimeBaseModel):
+    pass
+
+
+# Properties to update existing anime
+class AnimeUpdate(AnimeBaseModel):
+    pass
