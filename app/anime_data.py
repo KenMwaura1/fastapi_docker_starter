@@ -12,6 +12,10 @@ def get_top_anime():
     response = jikan.top(type='anime', page=2)
     return response['data']
 
+def get_current_season():
+    response = jikan.seasons()
+    return response['data']
+
 def get_anime_by_id(id):
     response = jikan.anime(id)
     return response
@@ -25,11 +29,11 @@ def get_anime_by_genre(genre_id):
     return response['data']
 
 def get_anime_by_season(year, season):
-    response = jikan.season(year=year, season=season)
+    response = jikan.seasons(year=year, season=season)
     return response['data']
 
 def get_anime_by_year(year):
-    response = jikan.season_archive(year=year)
+    response = jikan.seasons(year=year, season='winter')
     return response['data']
 
 def get_anime_by_producer(producer_id):
