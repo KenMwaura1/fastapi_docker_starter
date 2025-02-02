@@ -10,7 +10,6 @@ from starlette.templating import _TemplateResponse
 
 from app import crud, deps
 from app.schema import Anime
-from .anime_data import get_anime
 
 BASE_PATH = Path(__file__).resolve().parent
 TEMPLATES = Jinja2Templates(directory=str(BASE_PATH / "static/templates"))
@@ -72,7 +71,7 @@ def fetch_anime(*, anime_id: int, db: Session = Depends(deps.get_db)) -> Any:
     :param db:
     :return:
     """
-    result = crud.anime.get(db=db, id=anime_id)
+    result = crud.anime.get_by_id(db=db, id=anime_id)
     print(result)
     if not result:
         # the exception is raised, not returned - you will get a validation
@@ -83,7 +82,45 @@ def fetch_anime(*, anime_id: int, db: Session = Depends(deps.get_db)) -> Any:
 
     return result
 
+# get anime by name
+@api_router.get("/anime/name/{anime_name}", status_code=200, response_model=Anime)
+def fetch_anime(*, anime_name: str, db: Session = Depends(deps.get_db)) -> Any:
+    """
+    function to fetch an anime by id
+    :param anime_id:
+    :param db:
+    :return:
+    """
+    result = crud.anime.get_multi_by_name(db=db, name=anime_name)
+    print(result)
+    if not result:
+        # the exception is raised, not returned - you will get a validation
+        # error otherwise.
+        raise HTTPException(
+            status_code=404, detail=f"Anime with name {anime_name} not found"
+        )
 
+    return result
+
+# get anime by genre
+@api_router.get("/anime/genre/{anime_genre}", status_code=200, response_model=Anime)
+def fetch_anime(*, anime_genre: str, db: Session = Depends(deps.get_db)) -> Any:
+    """
+    function to fetch an anime by id
+    :param anime_id:
+    :param db:
+    :return:
+    """
+    result = crud.anime.get_by_genre(db=db, genre=anime_genre)
+    print(result)
+    if not result:
+        # the exception is raised, not returned - you will get a validation
+        # error otherwise.
+        raise HTTPException(
+            status_code=404, detail=f"Anime with genre {anime_genre} not found"
+        )
+
+    return result
 app.include_router(api_router)
 
 if __name__ == "__main__":
