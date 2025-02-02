@@ -11,7 +11,10 @@ logger = logging.getLogger(__name__)
 
 def init() -> None:
     db = SessionLocal()
-    init_db(db)
+    try:
+        init_db(db)
+    finally:
+        db.close()
 
 
 def main() -> None:
