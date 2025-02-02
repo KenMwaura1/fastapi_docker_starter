@@ -1,4 +1,5 @@
 aiohttp==3.7.4.post0
+annotated-types==0.7.0
 anyio==4.8.0
 asgiref==3.4.1
 async-timeout==3.0.1
@@ -12,14 +13,15 @@ fastapi==0.115.8
 greenlet==3.1.1
 h11==0.12.0
 idna==3.2
-jikanpy==4.3.2
+jikanpy-v4==1.0.2
 Jinja2==3.0.1
 limit==0.2.3
 MarkupSafe==2.0.1
 multidict==5.1.0
 propcache==0.2.1
 psycopg2-binary==2.9.10
-pydantic==1.8.2
+pydantic==2.10.6
+pydantic_core==2.27.2
 python-dotenv==0.19.0
 requests==2.26.0
 simplejson==3.17.5
