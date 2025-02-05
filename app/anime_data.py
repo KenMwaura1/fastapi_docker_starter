@@ -1,5 +1,3 @@
-from typing import Any, Dict
-import asyncio
 from jikanpy import Jikan
 
 jikan = Jikan()
