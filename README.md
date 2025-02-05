@@ -39,7 +39,7 @@ Below are steps to get the project up and running locally.
 
 You the following prerequisites to get started with this project.
 
-1. [Install Python 3.9.7 or 3.10](https://www.python.org/downloads/)
+1. [Install Python 3.10+](https://www.python.org/downloads/)
 2. [Install Docker](https://docs.docker.com/install/)
 3. [Install Docker Compose](https://docs.docker.com/compose/install/)
 4. [Install PostgreSQL](https://www.postgresql.org/download/)
@@ -84,7 +84,7 @@ You the following prerequisites to get started with this project.
   3a. Create a virtualenv
 
    ```
-       pyenv virtualenv fastapi
+    pyenv virtualenv fastapi
    ```
 
   3b. Activate the virtualenv
@@ -141,7 +141,7 @@ You the following prerequisites to get started with this project.
    run with [uvicorn](https://uvicorn.org/):
 
     ```shell
-        uvicorn main:app --reload --port 8002 --host 0.0.0.0
+    uvicorn main:app --reload --port 8002 --host 0.0.0.0
     ```
 
 9. Open the browser and go to<http://localhost:8001/home> view the app running.
@@ -198,7 +198,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 [@Ken_Mwaura1](https://twitter.com/Ken_Mwaura1
-) - kemwaura@gmail.com
+) - <kemwaura@gmail.com>
 
 Project Link: [https://github.com/KenMwaura1/fastapi_docker_starter](https://github.com/KenMwaura1/fastapi_docker_starter
 )
